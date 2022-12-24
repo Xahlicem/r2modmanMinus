@@ -87,7 +87,7 @@
                     <hr/>
                     <h2 class='title is-5'>But I need to update!</h2>
                     <p>Don't worry it will still notify you when there is an update available.</p>
-                    <p>you will need to download (and install if needed) it.</p>
+                    <p>You will need to download (and install if needed).</p>
                 </div>
             </div>
         </div>
