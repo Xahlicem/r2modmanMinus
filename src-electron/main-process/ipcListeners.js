@@ -1,5 +1,5 @@
 import { ipcMain, dialog } from 'electron';
-import { autoUpdater } from 'electron-updater';
+//import { autoUpdater } from 'electron-updater';
 import os from 'os';
 
 let browserWindow;
@@ -17,13 +17,7 @@ ipcMain.on('get-browser-window', ()=>{
 });
 
 ipcMain.on('update-app', ()=>{
-    if (typeof process.env.APPIMAGE !== "undefined" || !process.execPath.startsWith(os.tmpdir())) {
-        autoUpdater.autoDownload = true;
-        autoUpdater.checkForUpdatesAndNotify();
-        browserWindow.webContents.send('update-done');
-    } else {
-        browserWindow.webContents.send('update-done');
-    }
+    browserWindow.webContents.send('update-done');
 });
 
 ipcMain.on('install-via-thunderstore', (installString) => {

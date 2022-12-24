@@ -118,8 +118,8 @@ module.exports = configure(function(/* ctx */) {
             workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
             workboxOptions: {}, // only for GenerateSW
             manifest: {
-                name: `r2modmanPlus`,
-                short_name: `r2modmanPlus`,
+                name: `r2modmanMinus`,
+                short_name: `r2modmanMinus`,
                 description: `A simple and easy to use Risk of Rain 2 mod manager`,
                 display: 'standalone',
                 orientation: 'portrait',

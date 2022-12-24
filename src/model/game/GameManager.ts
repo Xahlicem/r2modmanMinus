@@ -16,10 +16,7 @@ export default class GameManager {
         new Game('Risk of Rain 2', 'RiskOfRain2', 'RiskOfRain2',
             'Risk of Rain 2', ['Risk of Rain 2.exe'], 'Risk of Rain 2_Data',
             'https://thunderstore.io/api/v1/package/', 'https://raw.githubusercontent.com/ebkr/r2modmanPlus/master/modExclusions.md',
-            [
-                new StorePlatformMetadata(StorePlatform.STEAM, "632360"),
-                new StorePlatformMetadata(StorePlatform.EPIC_GAMES_STORE, "4b3dcc5723454a47a9112d8fe8fd5f5c"),
-            ], "RiskOfRain2.jpg",
+            [new StorePlatformMetadata(StorePlatform.STEAM, "632360")], "RiskOfRain2.jpg",
             GameSelectionDisplayMode.VISIBLE, GameInstanceType.GAME, PackageLoader.BEPINEX, ["ROR2"]),
 
         new Game('Thunderstore Dev', 'ThunderstoreDev', 'ThunderstoreBeta',
@@ -43,19 +40,16 @@ export default class GameManager {
             ], "DysonSphereProgram.jpg", GameSelectionDisplayMode.VISIBLE, GameInstanceType.GAME, PackageLoader.BEPINEX, ["DSP"]),
 
         new Game('Valheim', 'Valheim', 'Valheim',
-            'Valheim', ['valheim.exe', 'valheim.x86_64'], 'valheim_Data',
+            'Valheim', ['valheim.exe'], 'valheim_Data',
             'https://valheim.thunderstore.io/api/v1/package/', 'https://raw.githubusercontent.com/ebkr/r2modmanPlus/master/modExclusions.md',
-            [
-                new StorePlatformMetadata(StorePlatform.STEAM, "892970"),
-                new StorePlatformMetadata(StorePlatform.XBOX_GAME_PASS, "CoffeeStainStudios.Valheim")
-            ], "Valheim.jpg", GameSelectionDisplayMode.VISIBLE, GameInstanceType.GAME, PackageLoader.BEPINEX),
+            [new StorePlatformMetadata(StorePlatform.STEAM, "892970")], "Valheim.jpg",
+            GameSelectionDisplayMode.VISIBLE, GameInstanceType.GAME, PackageLoader.BEPINEX),
 
         new Game('Valheim Dedicated Server', 'Valheim', 'ValheimServer',
-            'Valheim dedicated server', ['valheim_server.exe', 'valheim_server.x86_64'], 'valheim_server_Data',
+            'Valheim dedicated server', ['valheim_server.exe'], 'valheim_server_Data',
             'https://valheim.thunderstore.io/api/v1/package/', 'https://raw.githubusercontent.com/ebkr/r2modmanPlus/master/modExclusions.md',
-            [
-                new StorePlatformMetadata(StorePlatform.STEAM, "896660")
-            ], "Valheim.jpg", GameSelectionDisplayMode.VISIBLE, GameInstanceType.SERVER, PackageLoader.BEPINEX),
+            [new StorePlatformMetadata(StorePlatform.STEAM, "896660")], "Valheim.jpg",
+                GameSelectionDisplayMode.VISIBLE, GameInstanceType.SERVER, PackageLoader.BEPINEX),
 
         new Game('GTFO', 'GTFO', 'GTFO',
             'GTFO', ['GTFO.exe'], 'GTFO_Data',

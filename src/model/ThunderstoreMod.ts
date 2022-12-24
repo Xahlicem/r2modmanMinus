@@ -14,6 +14,7 @@ export default class ThunderstoreMod extends ThunderstoreVersion implements Reac
     private totalDownloads: number = 0;
     private categories: string[] = [];
     private hasNsfwContent: boolean = false;
+    private isModPack: boolean = false;
     private donationLink: string | undefined;
 
     public static parseFromThunderstoreData(data: any): ThunderstoreMod {
@@ -44,6 +45,7 @@ export default class ThunderstoreMod extends ThunderstoreVersion implements Reac
         mod.setPackageUrl(data.package_url);
         mod.setCategories(data.categories);
         mod.setNsfwFlag(data.has_nsfw_content);
+        mod.setModPackFlag(data.categories.includes('Modpacks'));
         mod.setDonationLink(data.donation_link);
         return mod;
     }
@@ -64,6 +66,7 @@ export default class ThunderstoreMod extends ThunderstoreVersion implements Reac
         this.setUuid4(reactive.uuid4);
         this.setCategories(reactive.categories);
         this.setNsfwFlag(reactive.hasNsfwContent);
+        this.setModPackFlag(reactive.categories.includes('Modpacks'));
         this.setDonationLink(reactive.donationUrl);
         return this;
     }
@@ -162,6 +165,14 @@ export default class ThunderstoreMod extends ThunderstoreVersion implements Reac
 
     public setNsfwFlag(isNsfw: boolean) {
         this.hasNsfwContent = isNsfw;
+    }
+
+    public getModPackFlag(): boolean {
+        return this.isModPack;
+    }
+
+    public setModPackFlag(isMP: boolean) {
+        this.isModPack = isMP;
     }
 
     public getDonationLink(): string | undefined {

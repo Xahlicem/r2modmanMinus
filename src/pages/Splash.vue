@@ -17,7 +17,7 @@
                         <li><a @click="view = 'about'" :class="[view === 'about' ? 'is-active' : '']">About</a></li>
                         <li><a @click="view = 'faq'" :class="[view === 'faq' ? 'is-active' : '']">FAQ</a></li>
                         <li>
-                            <link-component :url="'https://github.com/ebkr/r2modmanPlus'" :target="'external'">
+                            <link-component :url="'https://github.com/xahlicem/r2modmanMinus'" :target="'external'">
                                 <i class='fab fa-github fa-lg' aria-hidden='true' />
                             </link-component>
                         </li>
@@ -86,10 +86,10 @@
                     <span class='icon margin-right margin-right--half-width'>
                       <i class='fas fa-address-card' />
                     </span>
-                                        <strong>About r2modman</strong>
+                                        <strong>About r2modmanMinus</strong>
                                     </p>
-                                    <p>It's created by Ebkr, using Quasar.</p>
-                                    <p>Quasar provides the following development tools that r2modman is built upon:</p>
+                                    <p>It's created by Ebkr and Xahlicem, using Quasar.</p>
+                                    <p>Quasar provides the following development tools that r2modmanMinus is built upon:</p>
                                     <ul>
                                         <li>Electron</li>
                                         <li>Node</li>
@@ -152,7 +152,7 @@ import PathResolver from '../r2mm/manager/PathResolver';
     }
 })
 export default class Splash extends mixins(SplashMixin) {
-    heroTitle: string = 'Starting r2modman';
+    heroTitle: string = 'Starting r2modmanMinus';
     loadingText: string = 'Initialising';
     view: string = 'main';
 

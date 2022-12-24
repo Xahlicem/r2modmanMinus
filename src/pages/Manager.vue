@@ -4,7 +4,7 @@
 			<div class='container'>
 				<p>
 					An update is available.
-					<link-component :url="`https://github.com/ebkr/r2modmanPlus/releases/tag/${updateTagName}`"
+					<link-component :url="`https://github.com/xahlicem/r2modmanMinus/releases/tag/${updateTagName}`"
 					                :target="'external'"
 					>Click here to go to the release page.
 					</link-component>
@@ -171,6 +171,8 @@
                 <div>
                     <input class="is-checkradio has-background-color" id="nsfwCheckbox" type="checkbox" :class="[{'is-dark':!settings.darkTheme}, {'is-white':settings.darkTheme}]" v-model="allowNsfw">
                     <label for="nsfwCheckbox">Allow NSFW (potentially explicit) mods</label>
+                    <input class="is-checkradio has-background-color" id="packCheckbox" type="checkbox" :class="[{'is-dark':!settings.darkTheme}, {'is-white':settings.darkTheme}]" v-model="allowPacks">
+                    <label for="packCheckbox">Allow modpacks</label>
                 </div>
                 <br/>
                 <div>
@@ -416,6 +418,7 @@ import GameRunningModal from '../components/modals/GameRunningModal.vue';
         filterCategories: string[] = [];
         categoryFilterMode: string = CategoryFilterMode.OR;
         allowNsfw: boolean = false;
+        allowPacks: boolean = false;
 
         importingLocalMod: boolean = false;
 
@@ -478,6 +481,9 @@ import GameRunningModal from '../components/modals/GameRunningModal.vue';
             }
             if (!this.allowNsfw) {
                 this.searchableThunderstoreModList = this.searchableThunderstoreModList.filter(mod => !mod.getNsfwFlag());
+            }
+            if (!this.allowPacks) {
+                this.searchableThunderstoreModList = this.searchableThunderstoreModList.filter(mod => !mod.getModPackFlag());
             }
 			if (this.filterCategories.length > 0) {
 			    this.searchableThunderstoreModList = this.searchableThunderstoreModList.filter((x: ThunderstoreMod) => {
@@ -819,7 +825,7 @@ import GameRunningModal from '../components/modals/GameRunningModal.vue';
 			if (!ManagerInformation.IS_PORTABLE) {
 				return;
 			}
-			fetch('https://api.github.com/repos/ebkr/r2modmanPlus/releases')
+			fetch('https://api.github.com/repos/xahlicem/r2modmanMinus/releases')
 				.then(response => response.json())
 				.then((parsed: any) => {
 					parsed.sort((a: any, b: any) => {
