@@ -286,6 +286,10 @@
                             </div>
 						</div>
 						<template v-if="localModList.length > 0">
+							<div style="float: right; width: 20%;"><br></div>
+							<div style="position: absolute; left: 85%; top: 35px; width: 14%; z-index: 50;">
+                        		<button style="width: 100%; font-weight: bold;" id="local-export" class="button" @click="exportProfileAsCode">Export profile</button>
+							</div>
 							<LocalModList
                                 :settings="settings"
                                 @error="showError($event)">
