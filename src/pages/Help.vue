@@ -82,16 +82,12 @@
                 </div>
                 <div ref="Updating" v-if="activeTab === 'Updating'">
                     <h2 class='title is-5'>Auto-updates</h2>
-                    <p>The manager updates automatically on close assuming an update is available.</p>
-                    <p>Updates are downloaded in the background.</p>
-                    <p>You may receive a prompt to run <i>old_uninstaller</i> as an admin. This is the updater.</p>
-                    <p>If a problem occurs with an update, download and run the latest installer.</p>
+                    <p>I have disabled Auto-updates in this version of r2modman.</p>
+                    <p>Hopefully this will be fixed in the future.</p>
                     <hr/>
-                    <h2 class='title is-5'>I don't want updates</h2>
-                    <p>
-                        On GitHub there is a portable version that doesn't auto update. You are however prompted that an
-                        update is available.
-                    </p>
+                    <h2 class='title is-5'>But I need to update!</h2>
+                    <p>Don't worry it will still notify you when there is an update available.</p>
+                    <p>you will need to download (and install if needed) it.</p>
                 </div>
             </div>
         </div>

@@ -822,9 +822,9 @@ import GameRunningModal from '../components/modals/GameRunningModal.vue';
 		}
 
 		isManagerUpdateAvailable() {
-			if (!ManagerInformation.IS_PORTABLE) {
+			/*if (!ManagerInformation.IS_PORTABLE) {
 				return;
-			}
+			}*/
 			fetch('https://api.github.com/repos/xahlicem/r2modmanMinus/releases')
 				.then(response => response.json())
 				.then((parsed: any) => {
